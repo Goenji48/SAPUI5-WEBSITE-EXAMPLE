@@ -1,0 +1,77 @@
+<mvc:View xmlns:dvl="sap.ui.vk.dvl"
+    controllerName="MainPage.App"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt">
+    <App id="app">
+        <Page id="intro" title="GJLPlayer" backgroundDesign="Transparent" class="contentBackground">
+            <l:BlockLayout background="Light">
+                <l:BlockLayoutRow>
+                    <l:BlockLayoutCell backgroundColorSet="ColorSet1" >
+                        <VBox alignItems="Center" alignContent="Center" renderType="Div">
+                            <Image src="IMG\player_icon_gold_round.png" class="sapUiLargeMarginBottom" width="15rem"></Image>
+                            <Title level="H1" titleStyle="H1" text="Reprodutor de mídia para músicas e vídeos" width="100%" textAlign="Center"></Title>
+                        </VBox>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+                <l:BlockLayoutRow>
+                    <l:BlockLayoutCell backgroundColorSet="ColorSet1" >
+                        <VBox alignItems="Center">
+                            <HBox alignItems="Center" alignContent="Center" wrap="Wrap">
+                                <Image src="IMG\gjlplayer-android.png" class="sapUiLargeMarginBottom" width="20rem"></Image>
+                                <VBox alignItems="Center" alignContent="Center" renderType="Div" class="sapUiLargeMarginBeginEnd" width="30rem">
+                                    <Title level="H1" titleStyle="H1" text="O que é?" width="100%" textAlign="Center" class="sapUiLargeMarginBottom"></Title>
+                                    <Text text="GJLPlayer é um reprodutor de mídia simples para dispositivos móveis e para computadores. Nele também poderá realizar downloads de mídias de outras plataformas."></Text>
+                                </VBox>
+                            </HBox>
+                        </VBox>
+
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+                <l:BlockLayoutRow>
+                    <l:BlockLayoutCell backgroundColorSet="ColorSet1">
+                        <FlexBox items="{/features}" justifyContent="Center" wrap="Wrap" class="sapUiSmallMarginTopBottom">
+                            <tnt:InfoLabel text="{}" colorScheme="6" class="sapUiSmallMarginTop sapUiSmallMarginEnd"></tnt:InfoLabel>
+                        </FlexBox>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+                <l:BlockLayoutRow>
+                    <l:BlockLayoutCell>
+                       <Panel id="download-content">
+                        <VBox alignItems="Center">
+                            <HBox alignItems="Center" alignContent="Center" wrap="Wrap">
+                                <VBox renderType="Div" alignItems="Center">
+                                    <Image src="IMG\android.png" class="sapUiLargeMarginBottom" width="192px"></Image>
+                                    <Title level="H2" titleStyle="H2" text="GJLPlayer Android" width="100%" textAlign="Center"></Title>
+                                    <Text text="Mínimo: Android 6.0"></Text>
+                                    <Text text="Recomendado Android 8.0 ou superior"></Text>
+                                    <Button text="Download" press=".onDownload" class="sapUiSmallMarginTop"></Button>
+                                </VBox>
+                                <VBox renderType="Div" alignItems="Center" class="sapUiLargeMarginBeginEnd">
+                                    <Image src="IMG\windows.png" class="sapUiLargeMarginBottom" width="192px"></Image>
+                                    <Title level="H2" titleStyle="H2" text="GJLPlayer Windows" width="100%" textAlign="Center"></Title>
+                                    <Text text="Em breve..."></Text>
+                                </VBox>
+                            </HBox>
+                        </VBox>
+                       </Panel>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+                <l:BlockLayoutRow>
+                    <l:BlockLayoutCell>
+                       <Panel headerText="Sobre mais" expandable="true">
+                            <VBox alignItems="Center">
+                                <Text text="O aplicativo foi desenvolvido com cujo objetivo de adquirir mais conhecimentos em desenvolvimento de software"
+                                class="sapUiTinyMarginBottom"></Text>
+                                <Text text="Desenvolvido por João Luiz - 2023"></Text>
+                            </VBox>
+                       </Panel>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+            </l:BlockLayout>    
+        </Page>
+    </App>
+</mvc:View>
